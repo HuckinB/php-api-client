@@ -15,7 +15,7 @@ composer require azuracast/php-api-client
 
 require __DIR__ . '/vendor/autoload.php';
 
-$api = \AzuraCast\Api\Client::create(
+$api = \HuckinB\Api\Client::create(
 	'<IP-Address | Host>',
 	'<API Key>'
 );

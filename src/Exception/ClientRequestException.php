@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AzuraCast\Api\Exception;
+namespace HuckinB\Api\Exception;
 
 use Exception;
 

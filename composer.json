@@ -1,8 +1,8 @@
 {
-    "name": "azuracast/php-api-client",
+    "name": "huckinb/php-api-client",
     "description": "An API client library for the AzuraCast API",
     "keywords": ["azuracast", "api", "client"],
-    "homepage": "https://github.com/AzuraCast/php-api-client",
+    "homepage": "https://github.com/HuckinB/php-api-client",
     "type": "library",
     "license": "Apache-2.0",
     "authors": [
@@ -33,7 +33,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AzuraCast\\Api\\": "src"
+            "HuckinB\\Api\\": "src"
         }
     },
     "scripts": {

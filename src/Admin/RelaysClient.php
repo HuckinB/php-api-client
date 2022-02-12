@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace AzuraCast\Api\Admin;
+namespace HuckinB\Api\Admin;
 
-use AzuraCast\Api\AbstractClient;
-use AzuraCast\Api\Dto;
-use AzuraCast\Api\Exception;
+use HuckinB\Api\AbstractClient;
+use HuckinB\Api\Dto;
+use HuckinB\Api\Exception;
 
 class RelaysClient extends AbstractClient
 {

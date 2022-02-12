@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace AzuraCast\Api\Station;
+namespace HuckinB\Api\Station;
 
-use AzuraCast\Api\AbstractStationClient;
-use AzuraCast\Api\Dto;
-use AzuraCast\Api\Exception;
+use HuckinB\Api\AbstractStationClient;
+use HuckinB\Api\Dto;
+use HuckinB\Api\Exception;
 
 class MediaClient extends AbstractStationClient
 {

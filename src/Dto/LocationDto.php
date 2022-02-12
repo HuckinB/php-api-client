@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AzuraCast\Api\Dto;
+namespace HuckinB\Api\Dto;
 
 class LocationDto
 {
@@ -242,15 +242,28 @@ class LocationDto
      */
     public static function fromArray(array $locationData): self
     {
-        return new self(
-            $locationData['status'],
-            (string)$locationData['lat'],
-            (string)$locationData['lon'],
-            $locationData['timezone'],
-            $locationData['region'],
-            $locationData['country'],
-            $locationData['city'],
-            $locationData['message']
-        );
+        if($locationData['status'] == 'success'){
+            return new self(
+                $locationData['status'],
+                (string)$locationData['lat'],
+                (string)$locationData['lon'],
+                $locationData['timezone'],
+                $locationData['region'],
+                $locationData['country'],
+                $locationData['city'],
+                $locationData['message']
+            );
+        } else {
+            return new self(
+                $locationData['status'],
+                'No Data',
+                'No Data',
+                'No Data',
+                'No Data',
+                'No Data',
+                'No Data',
+                $locationData['message']
+            );
+        }
     }
 }

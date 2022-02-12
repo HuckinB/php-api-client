@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AzuraCast\Api\Dto;
+namespace HuckinB\Api\Dto;
 
 class RequestableSongDto
 {

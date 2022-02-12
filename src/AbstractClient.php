@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AzuraCast\Api;
+namespace HuckinB\Api;
 
 use GuzzleHttp\Client;
 
@@ -51,6 +51,8 @@ abstract class AbstractClient
         string $uri = '',
         array $options = []
     ) {
+        \set_time_limit(env('MAX_EXECUTION_TIME', 60));
+
         $response = $this->httpClient->request($method, $uri, $options);
 
         if (403 === $response->getStatusCode()) {

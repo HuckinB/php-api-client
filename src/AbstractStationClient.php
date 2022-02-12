@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AzuraCast\Api;
+namespace HuckinB\Api;
 
 use GuzzleHttp\Client;
 

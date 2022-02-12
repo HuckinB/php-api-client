@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace AzuraCast\Api\Admin;
+namespace HuckinB\Api\Admin;
 
-use AzuraCast\Api\AbstractClient;
-use AzuraCast\Api\Dto;
-use AzuraCast\Api\Dto\ApiKeyDto;
-use AzuraCast\Api\Dto\RoleDto;
-use AzuraCast\Api\Exception;
+use HuckinB\Api\AbstractClient;
+use HuckinB\Api\Dto;
+use HuckinB\Api\Dto\ApiKeyDto;
+use HuckinB\Api\Dto\RoleDto;
+use HuckinB\Api\Exception;
 
 class UsersClient extends AbstractClient
 {

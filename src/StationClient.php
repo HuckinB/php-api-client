@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace AzuraCast\Api;
+namespace HuckinB\Api;
 
-use AzuraCast\Api\Station;
-use AzuraCast\Api\Dto;
-use AzuraCast\Api\Exception;
+use HuckinB\Api\Station;
+use HuckinB\Api\Dto;
+use HuckinB\Api\Exception;
 use DateTime;
 
 class StationClient extends AbstractStationClient
@@ -143,11 +143,28 @@ class StationClient extends AbstractStationClient
      * @throws Exception\AccessDeniedException
      * @throws Exception\ClientRequestException
      */
-    public function listeners(): array
+    public function listeners($start = null, $end = null): array
     {
+        $isLive = $start == null;
+
+        if ($isLive) {
+            $startTimestamp = now()->format('Y-m-d H:i:s');
+            $endTimestamp =  now()->format('Y-m-d H:i:s');
+        } else {
+            $startCarbon = \Carbon\Carbon::parse($start);
+            $startTimestamp = $startCarbon->format('Y-m-d H:i:s');
+
+            $end = $end = null ? $start : $end;
+            
+            $endCarbon = \Carbon\Carbon::parse($end);
+            $endTimestamp = $endCarbon->format('Y-m-d H:i:s');
+        }
+
         $listenerDataArray = $this->request('GET', sprintf(
-            'station/%s/listeners',
-            $this->stationId
+            'station/%s/listeners?start=%s&end=',
+            $this->stationId,
+            $startTimestamp,
+            $endTimestamp
         ));
 
         $listenerDtoArray = [];

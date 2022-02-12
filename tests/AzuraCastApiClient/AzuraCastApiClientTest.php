@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace AzuraCast\Api;
+namespace HuckinB\Api;
 
-use AzuraCast\Api\Dto\UploadFileDto;
-use AzuraCast\Api\Exception\ClientRequestException;
+use HuckinB\Api\Dto\UploadFileDto;
+use HuckinB\Api\Exception\ClientRequestException;
 use Dotenv\Dotenv;
 use Faker\Factory as Faker;
 use PHPUnit\Framework\TestCase;

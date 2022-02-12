@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace AzuraCast\Api;
+namespace HuckinB\Api;
 
-use AzuraCast\Api\Admin;
+use HuckinB\Api\Admin;
 
 class AdminClient extends AbstractClient
 {
